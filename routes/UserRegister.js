@@ -10,7 +10,7 @@ Authorization.post("/signup", async (req, res) => {
   try {
     const userr=await reg_model.findOne({email})
     if(userr){
-      return res.status(200).json({error:"user already exist"})
+      return res.status(401).json({error:"user already exist"})
     }
     bcrypt.hash(password, 10, async (err, hash) => {
       const datatodb = new reg_model({ name, email, password: hash })
