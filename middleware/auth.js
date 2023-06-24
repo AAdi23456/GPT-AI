@@ -2,7 +2,7 @@
 import jwt from "jsonwebtoken"
 import BlacklistModel from "../model/blacklist.js";
 const Validate=async(req,res,next)=>{
-    const token=req.body.token
+    const token=req.headers.token
     const IsExpired=await BlacklistModel.findOne({token})
     if(IsExpired){
        return res.status(200).json({"msg":"Please Login Again"})
