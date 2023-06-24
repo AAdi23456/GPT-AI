@@ -68,7 +68,7 @@ GithubRoutes.post("/token",(req,res)=>{
     try {
         const {email}=req.body
       if(!email){
-        return res.status(400).json({ msg: "Email is not given})}
+        return res.status(400).json({ msg: "Email is not given"})}
         res.status(200).json({ msg: "Login successfull!", token: Jwt.sign({ email: email }, "masai")})
     } catch (error) {
         console.log(error);
