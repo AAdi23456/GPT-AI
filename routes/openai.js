@@ -77,7 +77,7 @@ AIroutes.post('/questions', Validate, async (req, res) => {
   }
 });
 
-AIroutes.get('/allfeedbacks', async (req, res) => {
+AIroutes.get('/allfeedbacks',Validate, async (req, res) => {
   try {
     const { email } = req.body;
     const data = await FeedbackModel.find({ email });
