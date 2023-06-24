@@ -45,7 +45,7 @@ AIroutes.post('/feedback', Validate, async (req, res) => {
   }
 });
 
-AIroutes.post('/questions, async (req, res) => {
+AIroutes.post('/questions', async (req, res) => {
   try {
     const { tech } = req.body;
 
