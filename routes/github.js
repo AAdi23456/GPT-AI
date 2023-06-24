@@ -63,6 +63,7 @@ const getUserEmail =async (accessToken) => {
   };
   
 GithubRoutes.post("/token",(req,res)=>{
+  console.log(req.body+"aditya")
     try {
         const {email}=req.body
         res.status(200).json({ msg: "Login successfull!", token: Jwt.sign({ email: email }, "masai")})
