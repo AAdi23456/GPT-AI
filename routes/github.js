@@ -7,7 +7,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 const clientID = process.env.clientID
 const clientSecret = process.env.clientSecret;
-const redirectURI = 'http://localhost:8080/github/callback';
+const redirectURI = 'https://giddy-shirt-eel.cyclic.app/github/callback';
 const scopes = ['user', 'repo']; 
 
 // Step 1: Redirect users to GitHub's authorization page
