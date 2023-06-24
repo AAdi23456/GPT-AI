@@ -13,7 +13,7 @@ const scopes = ['user', 'repo'];
 // Step 1: Redirect users to GitHub's authorization page
 GithubRoutes.get('/login', (req, res) => {
   res.redirect(`https://github.com/login/oauth/authorize?client_id=${clientID}&redirect_uri=${redirectURI}&scope=${scopes.join(' ')}`);
-  res.json("hehe")
+ // res.json("hehe")
 });
 GithubRoutes.get('/callback', async (req, res) => {
   const code = req.query.code;
