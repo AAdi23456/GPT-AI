@@ -48,7 +48,7 @@ AIroutes.post('/questions',Validate, async (req, res) => {
 
         const response = await openai.createCompletion({
             model: "text-davinci-003",
-            prompt: `provide me  random  questions related to ${tech}  which can be either easy,moderate or tough.
+            prompt: `provide me a unique random  question everytime i ask you related to ${tech}  .
         `,
             temperature: 0,
             max_tokens: 3000,
