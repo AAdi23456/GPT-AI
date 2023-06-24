@@ -13,7 +13,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 const AIroutes = express();
 
-AIroutes.use(express.json());
+
 
 let previousQuestions = []; // Array to store previously generated questions
 
@@ -45,7 +45,7 @@ AIroutes.post('/feedback', Validate, async (req, res) => {
   }
 });
 
-AIroutes.post('/questions', Validate, async (req, res) => {
+AIroutes.post('/questions, async (req, res) => {
   try {
     const { tech } = req.body;
 
