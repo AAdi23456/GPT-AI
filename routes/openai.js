@@ -56,7 +56,7 @@ AIroutes.post('/questions', Validate, async (req, res) => {
       response = await openai.createCompletion({
         model: 'text-davinci-003',
         prompt: `provide me a unique random question related to ${tech} every time, strictly don't repeat a question from previous responses.`,
-        temperature: 5,
+        temperature: 1.2,
         max_tokens: 3000,
         top_p: 1,
         frequency_penalty: 0.5,
