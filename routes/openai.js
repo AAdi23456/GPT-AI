@@ -26,7 +26,7 @@ AIroutes.post('/feedback', Validate, async (req, res) => {
       prompt: `the question is-${question} and answer is-${answer}
       provide me the feedback on a scale of 10 on the basis of the answer, and if the answer is null or an empty string, then provide me the correct answer with 0 marks out of 10
       `,
-      temperature: 0,
+      temperature: 0.5,
       max_tokens: 3000,
       top_p: 1,
       frequency_penalty: 0.5,
