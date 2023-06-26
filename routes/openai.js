@@ -23,8 +23,7 @@ AIroutes.post('/feedback', Validate, async (req, res) => {
 
     const response = await openai.createCompletion({
       model: 'text-davinci-003',
-      prompt: `the question is-${question} and answer is-${answer}
-      provide me the feedback on a scale of 10 on the basis of the answer, and if the answer is null or an empty string, then provide me the correct answer with 0 marks out of 10
+      prompt: `The answer to the ${question} is ${answer}. Please provide feedback on a scale of 0 to 10 based on the clarity and comprehensibility of the answer. If the answer is null or an empty string, please provide the correct answer and rate it 0 out of 10.
       `,
       temperature: 0.5,
       max_tokens: 3000,
