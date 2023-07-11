@@ -9,10 +9,11 @@
 
 ## Deployed Application
 
-The application is deployed and can be accessed at [https://giddy-shirt-eel.cyclic.app](https://giddy-shirt-eel.cyclic.app). Please visit the link to access the live version of the application.
+Frontend- [https://candid-kataifi-19e62b.netlify.app](https://candid-kataifi-19e62b.netlify.app)
+Backend-[https://giddy-shirt-eel.cyclic.app/](https://giddy-shirt-eel.cyclic.app/)
 
 
-Brief description of the project.
+ # Brief description of the project.
 
 ## Routes
 
