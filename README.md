@@ -1,16 +1,42 @@
 # GPT-AI
 
+Brief description of the project.
+
+## Project Description
+
+This project is based on self-interview preparation, utilizing OpenAI's language model to generate interview questions, evaluate answers, and provide feedback and suggestions. It aims to assist individuals in improving their interview skills and technical knowledge.
+
+### Key Features
+
+- **User Registration and Authentication**: Users can sign up and log in securely to access the interview preparation features.
+
+- **Question Generation**: The application generates unique random questions tailored to specific technologies, providing a diverse range of interview scenarios.
+
+- **Answer Evaluation**: Users can submit their answers, and the application employs OpenAI's language model to evaluate them based on clarity and comprehensibility. Feedback is provided to help users understand their strengths and areas of improvement.
+
+- **Feedback and Suggestions**: Users can provide feedback on the generated questions and suggest improvements for the answer evaluation process.
+
+
+### Technical Implementation
+
+The backend API server is built using Express.js, a Node.js framework, and MongoDB is used as the database for storing user information, feedback data, and blacklisted tokens for authentication.
+
+The project leverages OpenAI's language model and API for question generation and answer evaluation.
+
+User authentication and authorization are implemented using JSON Web Tokens (JWT), and passwords are securely hashed using bcrypt.
+
+Proper error handling and HTTP status codes are implemented for informative responses and graceful error management.
+
 ## Usage
 
-1. Install the dependencies: `npm install`.
-2. Set up the environment variables in a `.env` file.
+1. Install the project dependencies: `npm install`.
+2. Set up the required environment variables in a `.env` file.
 3. Start the server: `npm start`.
 4. Access the API at `http://localhost:8080`.
-
 ## Deployed Application
 
-Frontend- [https://candid-kataifi-19e62b.netlify.app](https://candid-kataifi-19e62b.netlify.app)
-Backend-[https://giddy-shirt-eel.cyclic.app/](https://giddy-shirt-eel.cyclic.app/)
+1.Frontend- [https://candid-kataifi-19e62b.netlify.app](https://candid-kataifi-19e62b.netlify.app)
+2.Backend-[https://giddy-shirt-eel.cyclic.app/](https://giddy-shirt-eel.cyclic.app/)
 
 
  # Brief description of the project.
