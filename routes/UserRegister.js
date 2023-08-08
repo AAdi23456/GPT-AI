@@ -22,7 +22,7 @@ Authorization.post("/signup", async (req, res) => {
 
   } catch (error) {
     console.log(error)
-    res.json("failed")
+    res.status(500).json({ "msg": err.message })
   }
 })
   
@@ -31,21 +31,25 @@ Authorization.post("/login", async (req, res) => {
   const { email, password } = req.body
   try {
     const user = await reg_model.findOne({ email })
-    console.log(user);
-    if (user) {
+    console.log("iugli");
+    if(!user){
+     return res.status(400).json({ "msg": "Register first" })
+    }
+    
       bcrypt.compare(password, user.password, (err, result) => {
         console.log(err);
         console.log(password);
 
         if (result) {
           res.status(200).json({ "msg": "Login successfull!", "token": jwt.sign({ "email": user.email }, "masai"),"name":user.name})
-        } else {
-          res.status(400).json({ "msg": "Wrong Credentials" })
+        if(err){
+          return res.status(400).json({ "msg": "wrong credintials" })
         }
-      });
-    }
+   
+      }
+    })
   } catch (err) {
-    res.status(400).json({ "msg": err.message })
+    res.status(500).json({ "msg": err.message })
   }
 })
 
