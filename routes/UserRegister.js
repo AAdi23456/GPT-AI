@@ -56,6 +56,7 @@ Authorization.post("/logout", async (req, res) => {
      await DataToDb.save()
   return res.status(200).json({msg:"Logout successful"})
     } catch (err) {
+      console.log(err)
      return res.status(400).json({ "msg": err.message })
     }
   })
